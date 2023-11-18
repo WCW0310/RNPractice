@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react'
 import {
   Button,
@@ -13,18 +6,19 @@ import {
   StatusBar,
   StyleSheet,
   useColorScheme,
+  NativeModules,
 } from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+const { TorchManager } = NativeModules
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? 'black' : 'white',
   }
 
   const onPress = () => {
-    console.log('torch btn pressed')
+    TorchManager.toggleTorch()
   }
 
   return (

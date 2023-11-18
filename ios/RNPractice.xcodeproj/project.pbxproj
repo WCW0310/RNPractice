@@ -12,6 +12,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		364346A92B08A890001BFC06 /* TorchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364346A72B08A890001BFC06 /* TorchManager.swift */; };
+		364346AA2B08A890001BFC06 /* TorchManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 364346A82B08A890001BFC06 /* TorchManagerBridge.m */; };
 		7699B88040F8A987B510C191 /* libPods-RNPractice-RNPracticeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNPractice-RNPracticeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNPractice/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNPractice/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNPractice-RNPracticeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNPractice-RNPracticeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		364346A22B08A511001BFC06 /* RNPractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNPractice-Bridging-Header.h"; sourceTree = "<group>"; };
+		364346A72B08A890001BFC06 /* TorchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorchManager.swift; sourceTree = "<group>"; };
+		364346A82B08A890001BFC06 /* TorchManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorchManagerBridge.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-RNPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPractice.debug.xcconfig"; path = "Target Support Files/Pods-RNPractice/Pods-RNPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RNPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPractice.release.xcconfig"; path = "Target Support Files/Pods-RNPractice/Pods-RNPractice.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-RNPractice-RNPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNPractice-RNPracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-RNPractice-RNPracticeTests/Pods-RNPractice-RNPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,12 +91,15 @@
 		13B07FAE1A68108700A75B9A /* RNPractice */ = {
 			isa = PBXGroup;
 			children = (
+				364346A72B08A890001BFC06 /* TorchManager.swift */,
+				364346A82B08A890001BFC06 /* TorchManagerBridge.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				364346A22B08A511001BFC06 /* RNPractice-Bridging-Header.h */,
 			);
 			name = RNPractice;
 			sourceTree = "<group>";
@@ -207,7 +215,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -414,6 +422,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				364346A92B08A890001BFC06 /* TorchManager.swift in Sources */,
+				364346AA2B08A890001BFC06 /* TorchManagerBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-RNPractice-RNPracticeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-RNPractice-RNPracticeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNPracticeTests/Info.plist;
@@ -501,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.wayne.weng.--PRODUCT-NAME-rfc1034identifier-";
 				PRODUCT_NAME = RNPractice;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNPractice-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -528,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.wayne.weng.--PRODUCT-NAME-rfc1034identifier-";
 				PRODUCT_NAME = RNPractice;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNPractice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
