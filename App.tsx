@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Button,
   SafeAreaView,
@@ -17,8 +17,11 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? 'black' : 'white',
   }
 
+  const [torchState, setTorchState] = useState(false)
+
   const onPress = () => {
-    TorchManager.toggleTorch()
+    TorchManager.toggleTorch(!torchState)
+    setTorchState(!torchState)
   }
 
   return (
