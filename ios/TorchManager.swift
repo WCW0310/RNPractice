@@ -2,7 +2,7 @@ import Foundation
 import AVFoundation
 
 @objc(TorchManager)
-class CalendarManager: NSObject {
+class TorchManager: NSObject {
 
  @objc func toggleTorch() {
    guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
