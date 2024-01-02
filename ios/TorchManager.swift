@@ -4,10 +4,10 @@ import AVFoundation
 @objc(TorchManager)
 class TorchManager: NSObject {
 
- @objc func toggleTorch() {
+ @objc func toggleTorch(_ enabled: Bool) {
    guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
        try? device.lockForConfiguration()
-       device.torchMode = device.torchMode == .off ? .on : .off
+       device.torchMode = enabled ? .on : .off
        device.unlockForConfiguration()
  }
 
