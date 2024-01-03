@@ -6,9 +6,8 @@ import {
   StatusBar,
   StyleSheet,
   useColorScheme,
-  NativeModules,
 } from 'react-native'
-const { TorchManager } = NativeModules
+import TorchManager from './nativeModules/TorchManager'
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
